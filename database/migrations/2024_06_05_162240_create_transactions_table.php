@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('product_id');
+            $table->integer('qty');
+            $table ->bigInteger('amount');
+            $table->string('status');
             $table->timestamps();
         });
     }
